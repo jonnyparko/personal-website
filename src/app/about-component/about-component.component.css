@@ -1,0 +1,5 @@
+@media (min-width: 601px) {
+.w3-col.m3, .w3-quarter {
+    width: 33%;
+}
+}
