@@ -3,3 +3,6 @@
     width: 33%;
 }
 }
+.fa-coffee:before {
+    content: "\f0f4" !important;
+}
