@@ -17,7 +17,7 @@ export class HomeComponentComponent implements OnInit {
   }
   @HostListener('window:scroll', ['$event']) // for window scroll events
     blurImg(event) {
-      console.log(window.pageYOffset);
+      // console.log(window.pageYOffset);
       if (window.pageYOffset > 150) {
         document.getElementById('home').setAttribute('style', 'filter: blur(5px)');
       } else {
