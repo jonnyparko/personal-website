@@ -35,5 +35,20 @@ export class AppComponent {
     iconRegistry.addSvgIcon(
           'ts',
         sanitizer.bypassSecurityTrustResourceUrl('assets/images/ts.svg'));
+    iconRegistry.addSvgIcon(
+          'angularColor',
+        sanitizer.bypassSecurityTrustResourceUrl('assets/images/angular (1).svg'));
+    iconRegistry.addSvgIcon(
+          'css3',
+        sanitizer.bypassSecurityTrustResourceUrl('assets/images/css3.svg'));
+    iconRegistry.addSvgIcon(
+          'html5',
+        sanitizer.bypassSecurityTrustResourceUrl('assets/images/html5Shiny.svg'));
+    iconRegistry.addSvgIcon(
+          'ts1',
+        sanitizer.bypassSecurityTrustResourceUrl('assets/images/ts1.svg'));
+    iconRegistry.addSvgIcon(
+          'javascriptColor',
+        sanitizer.bypassSecurityTrustResourceUrl('assets/images/javascriptColor.svg'));
   }
 }
