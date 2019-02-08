@@ -8,7 +8,6 @@ import { AboutComponentComponent } from './about-component/about-component.compo
 import { ProjectComponentComponent } from './project-component/project-component.component';
 import { ContactComponentComponent } from './contact-component/contact-component.component';
 import { FooterComponentComponent } from './footer-component/footer-component.component';
-import { IconSvgComponent } from './icon-svg/icon-svg.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
@@ -22,7 +21,6 @@ import { HttpClientModule } from '@angular/common/http';
     ProjectComponentComponent,
     ContactComponentComponent,
     FooterComponentComponent,
-    IconSvgComponent
   ],
   imports: [
     BrowserModule,
