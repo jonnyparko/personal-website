@@ -16,6 +16,9 @@ export class ContactComponentComponent implements OnInit {
       this.cars = data;
       console.log(this.cars);
     });
+  }
+
+  sendEmail() {
     this.http.send().subscribe(data => {
       console.log(data);
     });
