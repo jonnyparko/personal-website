@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../http.service';
 
+
 @Component({
   selector: 'app-contact-component',
   templateUrl: './contact-component.component.html',
@@ -8,6 +9,10 @@ import { HttpService } from '../http.service';
 })
 export class ContactComponentComponent implements OnInit {
   cars: Array<any>;
+
+  name: string;
+  fromEmail: string;
+  message: string;
 
   constructor(private http: HttpService) { }
 
@@ -19,7 +24,12 @@ export class ContactComponentComponent implements OnInit {
   }
 
   sendEmail() {
-    this.http.send().subscribe(success => {
+    this.http.send({
+      fromEmail: this.fromEmail,
+      message: this.message,
+      name: this.name
+    })
+    .subscribe(success => {
       console.log(success);
     }, error => {
       console.log(error);

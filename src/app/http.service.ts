@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, from } from 'rxjs';
 import { HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
@@ -20,7 +20,7 @@ export class HttpService {
     return this.http.get('//localhost:8080/cool-cars');
   }
 
-  send() {
-    return this.http.post('//localhost:8080/send', JSON.stringify(this.text), this.httpOptions);
+  send(data) {
+    return this.http.post('//localhost:8080/send', JSON.stringify(data), this.httpOptions);
   }
 }
