@@ -12,15 +12,17 @@ export class ContactComponentComponent implements OnInit {
   constructor(private http: HttpService) { }
 
   ngOnInit() {
-    this.http.getAll().subscribe(data => {
-      this.cars = data;
-      console.log(this.cars);
-    });
+    // this.http.getAll().subscribe(data => {
+    //   this.cars = data;
+    //   console.log(this.cars);
+    // });
   }
 
   sendEmail() {
-    this.http.send().subscribe(data => {
-      console.log(data);
+    this.http.send().subscribe(success => {
+      console.log(success);
+    }, error => {
+      console.log(error);
     });
   }
 
