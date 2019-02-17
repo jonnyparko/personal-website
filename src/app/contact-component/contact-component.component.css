@@ -15,10 +15,6 @@
     text-align: center; 
   }
 
-  .service-error {
-    color:#ff0000;
-  }
-
   .modal {
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
