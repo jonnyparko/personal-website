@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../http.service';
 import { Router } from '@angular/router';
+import {NgForm} from '@angular/forms';
+
 
 @Component({
   selector: 'app-contact-component',
@@ -20,12 +22,7 @@ export class ContactComponentComponent implements OnInit {
   constructor(private http: HttpService,
               private router: Router) { }
 
-  ngOnInit() {
-    // this.http.getAll().subscribe(data => {
-    //   this.cars = data;
-    //   console.log(this.cars);
-    // });
-  }
+  ngOnInit() {}
 
   sendEmail() {
     this.submitted = true;
@@ -43,8 +40,12 @@ export class ContactComponentComponent implements OnInit {
   }
 
   goToHome() {
-    this.router.navigate(['/home']);
+    // this.router.navigate(['/home']);
     this.submitted = false;
+  }
+
+  onSubmit(f: NgForm) {
+    f.reset();
   }
 
 }

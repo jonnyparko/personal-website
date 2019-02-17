@@ -16,7 +16,7 @@
       <div class="w3-large w3-margin-bottom">
         <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Kansas City, MO<br>
       </div>
-      <form>
+      <form #f="ngForm" (ngSubmit)="onSubmit(f)">
         <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
           <div class="w3-half">
             <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name" [(ngModel)]="name">
@@ -36,7 +36,7 @@
   <div [hidden]="!submitted" class="contact-message modal">
   <div *ngIf="error">
     <h2 class="success">Error!</h2>
-    <h4>The contact form was not successfully submitted.</h4>
+    <h4>I'm sorry but for some reason the email could not be sent.</h4>
     <br />
     <button (click)="goToHome()" class="w3-button w3-black w3-section">OK</button>
   </div>
