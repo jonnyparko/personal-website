@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../http.service';
 import { Router } from '@angular/router';
 import {NgForm} from '@angular/forms';
-
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-contact-component',
@@ -18,19 +18,27 @@ export class ContactComponentComponent implements OnInit {
   message: string;
   error: {};
   success: {};
+  registerForm: FormGroup;
 
   constructor(private http: HttpService,
-              private router: Router) { }
+              private router: Router,
+              private formBuilder: FormBuilder) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.registerForm = this.formBuilder.group({
+    name: ['', Validators.required],
+    message: ['', Validators.required],
+    fromEmail: ['', [Validators.required, Validators.email]]
+});
+}
 
   sendEmail() {
     this.submitted = true;
 
     this.http.send({
-      fromEmail: this.fromEmail,
-      message: this.message,
-      name: this.name
+      fromEmail: this.registerForm.controls.fromEmail.value,
+      message: this.registerForm.controls.message.value,
+      name: this.registerForm.controls.name.value
     })
     .subscribe(success => {
       this.success = success;
@@ -39,13 +47,18 @@ export class ContactComponentComponent implements OnInit {
     });
   }
 
+  get f() { return this.registerForm.controls; }
+
   goToHome() {
     // this.router.navigate(['/home']);
     this.submitted = false;
   }
 
   onSubmit(f: NgForm) {
-    f.reset();
-  }
-
+    if (this.registerForm.invalid) {
+      return;
+    }
+    this.sendEmail();
+      f.reset();
+    }
 }
