@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../http.service';
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contact-component',
@@ -10,11 +10,15 @@ import { HttpService } from '../http.service';
 export class ContactComponentComponent implements OnInit {
   cars: Array<any>;
 
+  submitted = false;
   name: string;
   fromEmail: string;
   message: string;
+  error: {};
+  success: {};
 
-  constructor(private http: HttpService) { }
+  constructor(private http: HttpService,
+              private router: Router) { }
 
   ngOnInit() {
     // this.http.getAll().subscribe(data => {
@@ -24,16 +28,23 @@ export class ContactComponentComponent implements OnInit {
   }
 
   sendEmail() {
+    this.submitted = true;
+
     this.http.send({
       fromEmail: this.fromEmail,
       message: this.message,
       name: this.name
     })
     .subscribe(success => {
-      console.log(success);
+      this.success = success;
     }, error => {
-      console.log(error);
+      this.error = error;
     });
+  }
+
+  goToHome() {
+    this.router.navigate(['/home']);
+    this.submitted = false;
   }
 
 }

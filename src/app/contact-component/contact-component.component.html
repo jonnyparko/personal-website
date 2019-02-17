@@ -33,4 +33,15 @@
       </form>
     </div>
   </div>
+  <div class="service-error" *ngIf="error">
+    <h1>{{error.errorTitle}}</h1>
+    <h3>{{error.errorDesc}}</h3>
+  </div>
+  <div [hidden]="!submitted" class="contact-message modal">
+    <div *ngIf="success" class="contact-success">
+      <h2 class="success">Success!</h2>
+      <h4>Contact form has been successfully submitted.</h4>
+      <br />
+      <button (click)="goToHome()" class="w3-button w3-black w3-section">OK</button>
+    </div>
 </div>
