@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { HttpService } from '../http.service';
 import { Router } from '@angular/router';
 import {NgForm} from '@angular/forms';
@@ -13,12 +13,19 @@ export class ContactComponentComponent implements OnInit {
   cars: Array<any>;
 
   submitted = false;
+
   name: string;
   fromEmail: string;
   message: string;
+
   error: {};
   success: {};
+
   registerForm: FormGroup;
+
+  @ViewChild('name') nameField: ElementRef;
+  @ViewChild('fromEmail') fromEmailField: ElementRef;
+  @ViewChild('message') messageField: ElementRef;
 
   constructor(private http: HttpService,
               private router: Router,
@@ -55,6 +62,15 @@ export class ContactComponentComponent implements OnInit {
   }
 
   onSubmit(f: NgForm) {
+    if (this.f.name.errors) {
+      this.nameField.nativeElement.focus();
+    }
+    if (this.f.fromEmail.errors) {
+      this.fromEmailField.nativeElement.focus();
+    }
+    if (this.f.message.errors) {
+      this.messageField.nativeElement.focus();
+    }
     if (this.registerForm.invalid) {
       return;
     }
