@@ -61,7 +61,7 @@ export class ContactComponentComponent implements OnInit {
     this.submitted = false;
   }
 
-  onSubmit(f: NgForm) {
+  onSubmit(f) {
     if (this.f.name.errors) {
       this.nameField.nativeElement.focus();
     }
