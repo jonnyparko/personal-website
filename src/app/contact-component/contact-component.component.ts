@@ -75,6 +75,6 @@ export class ContactComponentComponent implements OnInit {
       return;
     }
     this.sendEmail();
-      f.reset();
+      f.reset(); // remove this so the form doesnt reset on sending the email need to check if there was an error and if not then reset
     }
 }
