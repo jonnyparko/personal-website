@@ -1,3 +1,5 @@
+BUILD WITH -- ng build --prod --output-path docs --base-href "https://jonnyparko.github.io/Jonathan-Parker/"
+
 # MyWebsite
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.3.
