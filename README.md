@@ -1,4 +1,15 @@
-BUILD WITH -- ng build --prod --output-path docs --base-href "https://jonnyparko.github.io/Jonathan-Parker/"
+# BUILD WITH -- ng build --prod --output-path docs --base-href "https://jonnyparko.github.io/Jonathan-Parker/"
+
+# OSX MERGE -- Press i to insert message
+
+<esc> :w <enter>
+to write to the file and
+
+<esc> :q <enter>
+  to quite
+<> denotes key press
+  
+# Statically deployed on https://jonnyparko.github.io/Jonathan-Parker/ currently without email func :(
 
 # MyWebsite
 
