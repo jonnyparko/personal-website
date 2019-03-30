@@ -1,6 +1,15 @@
-# BUILD WITH -- ng build --prod --output-path docs --base-href "https://jonnyparko.github.io/Jonathan-Parker/"
+# BUILD 
 
-# OSX MERGE -- Press i to insert message
+ng build --prod --output-path docs --base-href "https://jonnyparko.github.io/Jonathan-Parker/"
+
+# DEPLOY
+
+When the build is complete, make a copy of docs/index.html and name it docs/404.html.
+Commit your changes and push.
+
+# OSX MERGE
+
+Press i to insert message
 
 <esc> :w <enter>
 to write to the file and
