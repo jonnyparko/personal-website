@@ -1,4 +1,24 @@
-BUILD WITH -- ng build --prod --output-path docs --base-href "https://jonnyparko.github.io/Jonathan-Parker/"
+# BUILD 
+
+ng build --prod --output-path docs --base-href "https://jonnyparko.github.io/Jonathan-Parker/"
+
+# DEPLOY
+
+When the build is complete, make a copy of docs/index.html and name it docs/404.html.
+Commit your changes and push.
+
+# OSX MERGE
+
+Press i to insert message
+
+<esc> :w <enter>
+to write to the file and
+
+<esc> :q <enter>
+  to quite
+<> denotes key press
+  
+# Statically deployed on https://jonnyparko.github.io/Jonathan-Parker/ currently without email func :(
 
 # MyWebsite
 
