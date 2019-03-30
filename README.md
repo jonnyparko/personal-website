@@ -1,5 +1,4 @@
-BUILD WITH -- ng build --prod --output-path docs --base-href /<project_name>/
-
+BUILD WITH -- ng build --prod --output-path docs --base-href "https://jonnyparko.github.io/Jonathan-Parker/"
 
 # MyWebsite
 
