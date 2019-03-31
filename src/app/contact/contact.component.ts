@@ -5,11 +5,11 @@ import {NgForm} from '@angular/forms';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-contact-component',
-  templateUrl: './contact-component.component.html',
-  styleUrls: ['./contact-component.component.css']
+  selector: 'app-contact',
+  templateUrl: './contact.component.html',
+  styleUrls: ['./contact.component.css']
 })
-export class ContactComponentComponent implements OnInit {
+export class ContactComponent implements OnInit {
   cars: Array<any>;
 
   submitted = false;
