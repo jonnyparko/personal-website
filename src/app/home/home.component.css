@@ -35,3 +35,20 @@
 	height: 100%;
 	opacity: 0;
 }
+@media (max-width: 720px) {
+    .w3-hide-small2 {
+        display: none!important;
+    }
+  }
+  
+  @media (max-width: 992px) and (min-width: 721px) {
+    .hide-medium2 {
+        display: none!important;
+    }
+  }
+  
+  @media (min-width: 721px) {
+    .w3-hide-large2 {
+        display: none!important;
+    }
+  }
