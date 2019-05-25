@@ -352,10 +352,10 @@ THE SOFTWARE.
 
 @angular/material/icon
 
-@angular/animations
+@angular/forms
 MIT
 
-@angular/forms
+@angular/animations
 MIT
 
 ngx-twitter-timeline
