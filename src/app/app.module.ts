@@ -15,6 +15,7 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgxTwitterTimelineModule } from 'ngx-twitter-timeline';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { LeadershipComponent } from './leadership/leadership.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
     ContactComponent,
     FooterComponent,
     NavBarComponent,
+    LeadershipComponent,
   ],
   imports: [
     BrowserModule,

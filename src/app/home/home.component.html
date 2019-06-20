@@ -1,5 +1,5 @@
 <!-- First Parallax Image with Logo Text -->
-<div class="bgimg-1 logo w3-display-container w3-opacity-min" id="home" (scroll)="blurImg($event)">
+<div class="bgimg-1 logo w3-display-container w3-opacity-min" id="home" #home (scroll)="blurImg($event)">
 
 <div class="w3-display-center w3-text-white" style="padding:48px;    margin: 0;
 position: absolute;
@@ -12,9 +12,14 @@ transform: translate(-50%, -50%);">
   <div class="w3-xxlarge" style="padding: 5px">The Northland is where I work, where I live, 
     and where I’m <i>from.</i></div>
 </div> -->
-<div class="opaque-background" style="background-color: gray !important; opacity: 0.4 !important; max-width: 1490px;">
-  <span class="w3-jumbo w3-hide-small">KC Custom Strategies</span>
-  <span class="w3-xxlarge w3-hide-large w3-hide-medium">KC Custom Strategies</span>
+<div class="opaque-background" style="background-color: black !important; opacity: 0.4 !important; max-width: 250px;">
+  <span class="w3-jumbo w3-hide-small">Method.</span>
+  <span class="w3-xxlarge w3-hide-large w3-hide-medium">Method.</span>
+</div>
+<br>
+<div class="opaque-background" style="background-color: black !important; opacity: 0.4 !important; max-width: 1000px;">
+  <span class="w3-xxlarge w3-hide-small">Design, develop, strategize.</span>
+  <span class="w3-large w3-hide-large w3-hide-medium">Design, develop, strategize.</span>
 </div>
 </div> 
 
@@ -24,4 +29,4 @@ transform: translate(-50%, -50%);">
 <app-project>
 </app-project>
 <app-contact>
-  </app-contact>
+</app-contact>
