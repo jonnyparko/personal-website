@@ -6,12 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav-bar.component.css']
 })
 export class NavBarComponent implements OnInit {
+  home: HTMLElement;
+  about: HTMLElement;
+  leadership: HTMLElement;
+  projects: HTMLElement;
+  contact: HTMLElement;
 
   constructor() { }
 
   ngOnInit() {
   }
-  scroll(el: HTMLElement) {
+    scroll(el: HTMLElement) {
     el.scrollIntoView();
   }
 }
