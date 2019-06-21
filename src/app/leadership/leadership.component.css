@@ -8,9 +8,9 @@
     border-radius: 50%;
   } */
 
-  @media (max-width: 800px) {
+  @media (max-width: 700px) {
     .person {
-      max-width: 350px !important; /* shrink image when the screen is less than 800 pixels wide */
+      max-width: 300px !important; /* shrink image when the screen is less than 800 pixels wide */
     }
   }
   
